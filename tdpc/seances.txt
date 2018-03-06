@@ -1,0 +1,12 @@
+[['algo', '2018-02-10', 'PM', 'Pas de résumé!'],
+ ['algo', '2018-02-11', 'PM', 'Pas de résumé!'],
+ ['algo', '2018-02-14', 'PM', 'Pas de résumé!'],
+ ['algo', '2018-02-16', 'PM', 'Pas de résumé!'],
+ ['algo', '2018-02-18', 'PM', 'Pas de résumé!'],
+ ['algo', '2018-02-19', 'PM', 'Pas de résumé!'],
+ ['sfo', '2018-02-10', 'AM', 'Pas de résumé!'],
+ ['sfo', '2018-02-11', 'AM', 'Pas de résumé!'],
+ ['sfo', '2018-02-14', 'AM', 'Pas de résumé!'],
+ ['sfo', '2018-02-16', 'AM', 'Pas de résumé!'],
+ ['sfo', '2018-02-18', 'AM', 'Pas de résumé!'],
+ ['sfo', '2018-02-19', 'AM', 'Pas de résumé!']]

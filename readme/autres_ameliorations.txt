@@ -1,0 +1,32 @@
+
+			---------------------- AUTRES AMELIORATIONS ENVISAGEABLE ---------------------------
+                                 -------------------------------------
+			
+			+ Ne pas considérer  les absences d'un étudiant, si un cours a débuté au moment où 
+				celui-ci n'avait pas encore était inscrit
+			+ Gérer le présence par promotion
+			+ Rejetter l'enregistrement d'un étudiant s'il a un matricule déjà attribué à un autre étudiant
+			+ S'arranger de sorte que la suppression d'un étudiant entraîne celle de toutes ses présences
+			+ Modifier une ou plusieurs données liées à une information 
+						Ex: pour une information 'presence', 
+							modifier :
+								- am_pm : valeurs possible [AM|PM]
+								- pres	: valeurs possible [P|A]
+			+ Vérifier si un cours n'existe pas avant de se résoudre à l'ajouter
+			+ Vérifier si un cours existe bien avant de créer une de ses séances
+			+ Vérifier si une séance indiquée dans une présence existe avant de compléter la présence
+			+ Vérifier si une séance ne sera pas enregistrée à une date antérieure à celle du début du cours
+			+ Vérifier q'une séance a bel et bien été créée avant d'importer les présences deladite séance
+			+ Vérifier que chaque présence est bien complétée dans le fichier excel avant de l'enregistrer
+
+
+
+
+
+								----> affichage.py <---- list_data.py <-----
+																			<----[db_list.py db_ressources.py]
+__init__.py ----> exec_cmd.py 										  <-----		
+								----> import_data.py <------ <------ 
+																	  <----- db_add.py
+
+

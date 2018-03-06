@@ -1,0 +1,139 @@
+0. usage de split si le motif de découpage n'existe pas
+	str = "kasongo likasi 13"
+	tab = str.split(',') # tab est un tableau de trois éléments
+
+	s = str.split('x') 	# s est un tableau d'un seul élémen qui ["kasonga likasi 13"]
+						# simplement parce que 'x' n'est pas dans str 
+
+
+1. Affectation multiple
+	a, b, c = [1,2,3] 	 # a=1, b=2 et c=3
+	a, b, c = tab[0], tab[1], tab[2]
+	nom, lieu, age = tab # devinez les valeurs de nom, lieu et age
+
+2. Sélection d'une partie d'un tableau
+	d = 10 / 3 # d = 3.33333333,
+	# question comment récupérer juste les 4 première caractères
+
+3. Ecrire dans une chaine de caractère (chaine paramétrée) :
+	str = "tdpc/presences/%s/%s_%s.txt" % (acro,date,am_pm)
+
+	def format1():
+		""" description de la fonction """ #docstring
+		str = """
+		1. %s
+		2. %s 
+		3. %s"""		# chaine paramétrée
+		affichage(str)
+		
+	def format2():
+		str = """
+		1. %s		2. %s 		3. %s""" # chaine paramétrée
+		affichage(str)
+		
+	def affichage(chaine_p):		
+		print(chaine % ("chado","chad","chadax"))
+
+4. parcourt des tuple avec for (enumerate()):
+	transforme chaque élément d'une liste en un tuple de deux éléments l'indice de l'élément et
+	l'élément lui-même
+	ex: res = enumerate([e1,e2]) # res == [(0,e1),(1,e2)]
+	for i , e in res:
+		print(i,e)# devinez les valeurs affichées à l'écrant
+
+
+5. exécution procédurale:
+	appel d'une fonction en paramètre d'une fonction
+	def afficher(str):
+		print("je dois afficher %s n'est-ce pas?" % str )
+	
+	afficher(input())
+
+6. Module 
+	Tout fichier python un module c.à.d les variable et fonction qu'il contient
+	peuvent être utilisé depuis l'exterieur du fichier
+	(il faut juste savoir comment l'importer)
+
+	si le fichier encours s'appel rappel.py 
+	créer un fichier test.py dans le même dossier que le fichier rappel.py
+	et tapez-y le code suivant:
+
+	1.
+	import rappel
+	rappel.afficher("chado") # appel à une fonction définie dans un module importé
+	print(rappel.nom,rappel.lieu,rappel.age) # il va chercher les variable dans le module imorté
+	2.
+	from rappel import * 
+	afficher("chado") # appel à une fonction définie dans un module importé
+	print(nom,lieu,age) # il va chercher les variable dans le module imorté
+
+	Autre exemples 
+	import os  # importation du module os, permet d'interagir avec le systeme d'exploitation
+	def est_un_fichier(path)
+		if os.path.isdir(path):
+			print('%s est un chemin qui existe' % path)
+		else:
+			print("%s n'est un chemin correct!" % path)
+
+	# tester la fonction
+	est_un_fichier('chado/chad/chadax')
+
+
+7. usage de exit() & transformer un tableau en chaine de caractère (sérialisation)
+	arrête l'exécution d'un programme 
+	(ne l'utiliser que si certaines condition ne sont par remplies)
+	ex:
+	import sys 
+	if len(sys.argv)<3: #dans mon exemple j'ai besoin que le nombre d'arguments soit plus de 3
+		exit()
+
+	print(sys.argv[0])  # pour éviter
+	print(sys.argv[2])  # des erreurs
+	print(sys.argv[2])  # vue la manière dont j'y accède
+	
+	# sérialisation
+	chaine = str(sys.argv)
+	print("vous avez fourni %s arguments qui sont %" % ( len(tab), chaine ) )
+
+	print("afficher le tableau d'arguments avant sérialisation")
+	for c in sys.argv:
+		print(c)
+
+	print("afficher le tableau d'arguments après sérialisation (pour voir la transformation en chaine des caractères)")
+	for c in str(sys.argv):
+		print(c)
+		
+
+	# désérialisation 
+	r = eval("2 + 3 ")
+	r = eval(" 'kas' + 'ongo' ")
+	r = eval("[2,3,4]")
+	
+	tab = eval(chaine) # devinez 
+
+	# fonction replace
+	src = "un grand étudiant aimant ,souriant dans un parti extra-ordinaire"
+	oui = src.replace(' ','e ') # une grande étudiante aimante ,souriante danse une partie extra-ordinaire
+
+8. écriture et lecture dans un fichier
+	# ouverture d'un fichier data.txt en mode lecture (contenu du fichier)
+	""""1er pers, 2ièm pers, 3iem pers
+	je suis, tu es, il est
+	nous sommes, vous êtes, ils sont"""
+
+	f = open('data.txt','r')# ouverture du fichier
+	data = f.read()			# chargement des donnée
+	f.close()				# fermeture du fichier 
+
+	# convertir data en un tableau de 3 lignes, 3 colonnes
+	# sériabliser le tablau obtenu et reenregistrer les données du tableau dans un fichier 'tab.txt'
+	# lire le fichier 'tab.txt' 
+	# placer son contenu dans un tableau et le modifier, 
+	# et le reenregistrer de nouveau
+
+	chaine = str(tab).replace('], [',"],\n [")
+	
+
+9. Usage de matplotlib 
+10. Programmation des scockets
+
